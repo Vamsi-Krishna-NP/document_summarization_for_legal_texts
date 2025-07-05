@@ -1,6 +1,6 @@
 from datascience.constants import *
 from datascience.utils.common import read_yaml, create_directories
-from datascience.entity import DataIngestionConfig,DataValidationConfig
+from datascience.entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig
 
 class configuration_manager:
     def __init__(
@@ -39,3 +39,16 @@ class configuration_manager:
         )
 
         return data_validation_config
+    
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        """
+        method to get data transformation configuration
+        """
+        config = self.config.data_transformation
+        data_transformation_config = DataTransformationConfig(
+            root_dir = config.root_dir,
+            data_path = config.data_path,
+            tokenizer_name = config.tokenizer_name
+        )
+        
+        return data_transformation_config
