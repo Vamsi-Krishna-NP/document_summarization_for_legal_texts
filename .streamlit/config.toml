@@ -1,0 +1,13 @@
+[theme]
+primaryColor = "#B6862C"          # gold
+backgroundColor = "#0F172A"       # deep slate/navy
+secondaryBackgroundColor = "#111827"  # near-black slate
+textColor = "#F3F4F6"             # light gray
+font = "serif"
+
+[server]
+enableCORS = true
+enableXsrfProtection = true
+headless = true
+maxUploadSize = 50
+port = 8501
